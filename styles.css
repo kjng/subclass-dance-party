@@ -1,7 +1,7 @@
-body, html{
+body, html {
   height:100%;
 }
-body{
+body {
   margin: 0px;
   background-color:#444;
   font-size: 18px;
@@ -9,37 +9,49 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-
-.title, .addDancerButton{
+.title, .addDancerButton {
   padding:5px 12px;
   float:right;
 }
-.topbar{
+.topbar {
   height:32px;
   background-color: #555;
 }
-.title{
+.title {
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+.dancer {
+  height: 5em;
+  width: 5em;
+  position: absolute;
+  background-image: url("http://vignette1.wikia.nocookie.net/halo/images/b/b5/Grunt-transparent.png/revision/latest?cb=20090626213308");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.expand{
+.expand {
+  height: 15em;
+  width: 15em;
   animation: expand;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-
+.masterchief {
+  background-image: url("http://files.gamebanana.com/img/ico/sprays/538148e0dba3b.gif");
+}
+.spongebob {
+  background-image: url("https://media.giphy.com/media/3vOB7lZQvYKoE/giphy.gif");
+}
+.change-color{
+  filter: invert(100%);
+}
 @keyframes expand {
   0% {
-    border-width: 10px;
+    background-size: 5em;
   }
-  50% {
-    border-width: 20px;
+  75% {
+    background-size: 15em;
   }
-  0% {
-    border-width: 10px;
+  100% {
+    background-size: 5em;
   }
 }
