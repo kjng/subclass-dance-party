@@ -9,6 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
@@ -24,4 +25,21 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.expand{
+  animation: expand;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes expand {
+  0% {
+    border-width: 10px;
+  }
+  50% {
+    border-width: 20px;
+  }
+  0% {
+    border-width: 10px;
+  }
 }
