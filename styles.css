@@ -3,7 +3,8 @@ body, html {
 }
 body {
   margin: 0px;
-  background-color:#444;
+  background-size: 100% 100%;
+  background-image: url(http://www.clipartbay.com/cliparts/cartoon-beach-scene-clip-art-wqcx468.svg);
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -19,6 +20,10 @@ body, a:link, a:visited, a:active{
 }
 .title {
   background-color: #777;
+}
+.player{
+  bottom: 0;
+  position: absolute;
 }
 .dancer {
   height: 5em;
@@ -48,7 +53,8 @@ body, a:link, a:visited, a:active{
   0% {
     background-size: 5em;
   }
-  75% {
+  50% {
+    margin: -5em;
     background-size: 15em;
   }
   100% {

@@ -3,6 +3,7 @@ var MakeExpandingDancer = function(top, left, timeBetweenSteps) {
   this.oldStep = MakeDancer.prototype.step;
   MakeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('expand');
+  this.$node.css('animation-duration', Math.ceil(this.timeBetweenSteps) + 200 + 'ms');
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 };

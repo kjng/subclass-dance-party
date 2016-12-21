@@ -24,8 +24,8 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      ($('body').height() - 150) * Math.random(),
-      ($('body').width() - 150) * Math.random(),
+      ($('body').height() - 600) * Math.random() + 400,
+      ($('body').width() - 200) * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
@@ -33,8 +33,22 @@ $(document).ready(function() {
   });
 
   $('.lineup').on('click', function(event) {
+    var newRow = false;
+    var topPosition = 400;
+    var leftPosition = 0;
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].css({top: 500});
+      if (leftPosition >= 950) {
+        topPosition += 100;
+        if (newRow) {
+          leftPosition = 0;
+          newRow = false;
+        } else {
+          leftPosition = 40;
+          newRow = true;
+        }
+      }
+      window.dancers[i].css({top: topPosition, left: leftPosition});
+      leftPosition += 80;
     }
   });
 });
