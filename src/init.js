@@ -51,5 +51,18 @@ $(document).ready(function() {
       leftPosition += 80;
     }
   });
+
+  $('body').on('click', '.warthog', function(event) {
+    for (var j = 0; j < window.dancers.length; j++) {
+      if (window.dancers[j].hasClass('warthog')) {
+        window.dancers[j].animate({'left': '1000px'});
+      }
+    }
+  });
+
+
+  $('body').on('click', '.masterchief', function(event) {
+    $(this).remove();
+  });
 });
 

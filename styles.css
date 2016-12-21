@@ -77,6 +77,9 @@ body, a:link, a:visited, a:active{
 .change-color{
   filter: invert(100%);
 }
+.warthog{
+  background-image: url("http://vignette1.wikia.nocookie.net/zootycoon/images/7/7f/Warthog.png/revision/latest?cb=20140630202714");
+}
 @keyframes expand {
   0% {
     background-size: 5em;
